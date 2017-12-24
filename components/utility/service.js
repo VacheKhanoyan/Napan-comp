@@ -7,6 +7,7 @@ const ErrorTypes = {
   PASS_MISSING: 'password_missing',
   INVALID_USERNAME_RANGE: 'invalid_username_range',
   INVALID_PASSWORD_RANGE: 'invalid_password_range',
+  INVALID_AGE_RANGE: 'invalid name range',
   INVALID_AGE_RANGE: 'invalid_age_range',
   USER_CREATION_ERROR: 'user_creation_error',
   PERMISSION_DENIED: 'permission_denied',
@@ -34,7 +35,7 @@ class Utility {
     }
     next();
   }
-static generateErrorMessage(type, options) {
+  static generateErrorMessage(type, options) {
     options = options || {};
     let error_object = {
       type: type || ErrorTypes.UNKNOWN_ERROR,
@@ -54,6 +55,10 @@ static generateErrorMessage(type, options) {
       case ErrorTypes.INVALID_PASSWORD_RANGE:
       error_object.message = 'Invalid min/max value for password, must be ...'; // TODO:
       break;
+      case ErrorTypes.INVALID_NAME_RANGE:
+      error_object.message = 'please add correct name';
+      break;
+
       case ErrorTypes.INVALID_PASSWORD_RANGE:
       error_object.message = 'please add correct age';
       break;
@@ -80,10 +85,13 @@ static generateErrorMessage(type, options) {
       break;
       case ErrorTypes.EMPTY_PHOTO:
       error_object.message = 'photo is empty';
+      break;
       case ErrorTypes.PHOTO_TYPE_ERROR:
       error_object.message = 'wrong photos type';
+      break;
       case ErrorTypes.PHOTO_DELETE_ERROR:
       error_object.message = 'dont delete, please try again';
+      break;
     }
     return error_object;
   }

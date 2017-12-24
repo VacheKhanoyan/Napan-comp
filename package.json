@@ -12,7 +12,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "fs": "0.0.1-security",
     "image-size": "^0.6.1",
     "keygenerator": "^1.0.4",
     "mongoose": "^4.13.6",

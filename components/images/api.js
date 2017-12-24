@@ -80,8 +80,8 @@ ImagesRouter.post('/', upload.single('image'),  (req,res) => {
   if (!req.file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
     return res.send(Utility.generateErrorMessage(ET.PHOTO_TYPE_ERROR))
   }
-  let dimensions = sizeof('{dest}/{filename}'.replace('{dest}',req.file.destination)
-  .replace('{filename}',req.file.filename));
+  let dimensions = sizeof('{dest}/{filename}'.replace('{dest}', req.file.destination)
+                                             .replace('{filename}', req.file.filename));
 
   let image = {
     content_type: req.file.mimetype,

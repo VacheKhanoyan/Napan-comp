@@ -9,7 +9,7 @@ let ImagesSchema = new Schema ({
       intex: true,
       ref: 'users'
     },
-    images: {
+    image: { // TODO: renamed to image from images
       type: Buffer,
       default: null,
       },
@@ -27,7 +27,7 @@ let ImagesSchema = new Schema ({
     width: {
       type: Number
     },
-    heigth: {
+    height: { // renamed to height
       type: Number
     },
     title:{

@@ -12,4 +12,4 @@ class UsersDAO extends BaseDAO {
   }
 }
 
-module.exports = new UsersDAO;
+module.exports = new UsersDAO();
