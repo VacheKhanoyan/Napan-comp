@@ -1,0 +1,56 @@
+body {
+	font-family: 'Varela Round', sans-serif;
+	font-family: 16px; 
+}
+h1 {
+	color: #3c4954;
+	text-align: center;
+	margin-top: 100px;
+	font-size: 36px;
+}
+
+p {
+	color: #a4b0b9;
+	line-height: 200%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+footer {
+	position: absolute;
+	width: 100%;
+	bottom: 20px;
+}
+.form-div {
+	margin-top: 100px;
+}
+.input-label {
+	background: #009688;
+	color: #fff;
+	padding: 30px;
+	transition: 0.3s;
+}
+.input-label:hover {
+	background: #26a68a;
+	cursor: pointer;
+}
+.fa {
+	margin-right: 10px;
+}
+#file {
+	display: none;
+}
+.but-div{
+	position: fixed;
+	top: 200px;
+	left: 48%;
+	width: 0px;
+	height: 250px;
+}
+#submit {
+    background: #009688;
+	cursor: pointer;
+	transition: 0.3s;
+}
