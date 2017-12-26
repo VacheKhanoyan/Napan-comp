@@ -32,7 +32,9 @@ class UsersService {
     }
 
 setUser(user){
-  let uv_response = UserValidator.validateUsername(user.username);
+  
+  return new Promise((resolve, reject) => {
+let uv_response = UserValidator.validateUsername(user.username);
   if(uv_response != Utility.ErrorTypes.SUCCESS) {
     console.log(Utility.generateErrorMessage(uv_response));
     return Utility.generateErrorMessage(uv_response);
@@ -61,7 +63,6 @@ setUser(user){
     console.log(Utility.generateErrorMessage(email_res));
     return Utility.generateErrorMessage(email_res);
   }
-  return new Promise((resolve, reject) => {
     return UsersDAO.insertData(user).then(data =>{
       resolve(data);
     }).catch(err => {

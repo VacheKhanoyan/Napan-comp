@@ -1,6 +1,6 @@
 body {
 	font-family: 'Varela Round', sans-serif;
-	font-family: 16px; 
+	font-family: 16px;
 }
 h1 {
 	color: #3c4954;
@@ -43,11 +43,15 @@ footer {
 	display: none;
 }
 .but-div{
-	position: fixed;
-	top: 200px;
-	left: 48%;
-	width: 0px;
-	height: 250px;
+	/*position: fixed;*/
+	/*top: 200px;*/
+	/*left: 48%;*/
+	/*width: 0px;*/
+	/*height: 250px;*/
+	margin: 40px auto 0px;
+}
+#upload-input {
+  display: none;
 }
 #submit {
     background: #009688;

@@ -9,6 +9,8 @@ app.use(bodyparser.urlencoded({
 }));
 app.use(Utility.parseQuery);
 
+app.use(express.static(__dirname + "public"));
+
 const api_v1 = require('./controllers/api');
 api_v1.initialize(app);
 

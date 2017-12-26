@@ -10,6 +10,7 @@ const AppConstants = require('./../settings/constants');
 const UserValidator = require('./../utility/validators/user-validator');
 const upload = multer({dest: 'resource/'});
 const ET = Utility.ErrorTypes;
+
 /*function _auth(permission) {
 return function(req,res,next){
 if(permission == 'optional'){

@@ -1,20 +1,22 @@
-<!DOCTYPE HTML>
+
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title> File Uploader </title>
-	<link href = 'https://fonts.googleapis.com/css?family= Varela+Round' rel='stylesheet' type='text/css' >
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css"/>
-	
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css"/>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+
 </head>
 <body align="center">
-	
+
 	<header>
 		<p> Insert some video, photo or GIF file</p>
 	</header>
 
-<div class = "form-div"> 
+<div class = "form-div">
 <form>
 	<label for="file" class="input-label">
  		<i class="fa fa-upload"></i>
@@ -24,13 +26,14 @@
 	<input id="file" type="file" multiple="true"/>
 </form>
 </div>
+<form action="./../components/images/api" method="post">
 <div class ="but-div">
-<button id="submit"> Submit </button>
+<button id="submit" type="submit"> Submit </button>
 </div>
+</form>
+ <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
 <footer>
 	<p>NAPAN</p>
 </footer>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="index.js"></script>
 </body>
 </html>
